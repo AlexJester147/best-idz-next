@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getProductsByCategoryId } from "@/api/requests";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { setCategoryName } from "@/utils/functions";
 
 export default function CategoryProducts({ params }) {
   const [data, setData] = useState([]);
@@ -17,7 +18,9 @@ export default function CategoryProducts({ params }) {
           data.product?.map((item) => (
             <div key={item.id} className="category">
               <Link href={`${pathname}/${item.id}`}>
-                <div className="category-image">{item.name}</div>
+                <div className="category-image">
+                  {setCategoryName(item.name)}
+                </div>
                 <div className="category-name">{item.name}</div>
               </Link>
               <div className="price-container">
