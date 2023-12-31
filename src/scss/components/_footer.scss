@@ -1,0 +1,13 @@
+.footer-image__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 10px;
+  justify-content: center;
+  align-content: center;
+  img {
+    height: 40px;
+    width: auto;
+    box-sizing: content-box;
+    padding: 15px;
+  }
+}

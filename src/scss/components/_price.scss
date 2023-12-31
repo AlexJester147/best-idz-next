@@ -1,0 +1,30 @@
+.price {
+  display: grid;
+  flex-wrap: wrap;
+  gap: 40px 10px;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  max-width: 1730px;
+  h2 {
+    margin-bottom: 20px;
+  }
+  &-block {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-content: flex-start;
+    &__row {
+      display: grid;
+      grid-template-columns: repeat(4, 50px);
+      justify-content: center;
+      margin: 10px 0;
+      &-control {
+        display: grid;
+        grid-template-columns: 105px 50px 50px 50px;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        width: 255px;
+      }
+    }
+  }
+}

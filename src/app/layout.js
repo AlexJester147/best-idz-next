@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import "../styles/globals.scss";
+import "../scss/app.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 

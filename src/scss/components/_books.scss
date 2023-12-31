@@ -1,0 +1,13 @@
+.books {
+  h2 {
+    margin-bottom: 20px;
+  }
+  .book-description {
+    p {
+      margin: 10px 0;
+    }
+  }
+  &_ancor {
+    margin: 25px 0 30px 0;
+  }
+}
