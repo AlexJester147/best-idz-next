@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="32px" viewBox="0 0 41 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>иконки copy 23</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F9F9F9" offset="0%"></stop>
+            <stop stop-color="#F5F5F5" offset="100%"></stop>
+        </linearGradient>
+        <path d="M30.7707879,25.7758621 L4.03420379,25.7758621 C1.80626667,25.7758621 0,23.9126355 0,21.6149015 L0,4.16096059 C0,1.8632266 1.80626667,0 4.03420379,0 L30.7707879,0 C32.998725,0 34.8045455,1.8632266 34.8045455,4.16096059 L34.8045455,21.6149015 C34.8045455,23.9126355 32.998725,25.7758621 30.7707879,25.7758621 Z" id="path-2"></path>
+        <filter x="-12.9%" y="-17.5%" width="125.9%" height="134.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="0%" y1="50.0522466%" x2="100.140585%" y2="50.0522466%" id="linearGradient-4">
+            <stop stop-color="#50A8DE" offset="0%"></stop>
+            <stop stop-color="#58A1DC" offset="0%"></stop>
+            <stop stop-color="#2D3E90" offset="100%"></stop>
+            <stop stop-color="#4C82C3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Инвойсинг2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons-tab-/-card-copy" transform="translate(-2.000000, -5.000000)">
+            <g id="card" transform="translate(3.000000, 8.000000)">
+                <g id="иконки-copy-23" transform="translate(2.000000, 0.000000)">
+                    <g id="Stroke-1">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    </g>
+                    <g id="MIR_EN" transform="translate(4.462121, 8.888228)" fill-rule="nonzero">
+                        <path d="M6.2090596,5.77677689 L5.99184497,5.77677689 L4.72134433,1.28326374 C4.50566929,0.522142758 3.82190166,-0.00132261872 3.04510315,-2.51086796e-06 L0,-2.51086796e-06 L0,9.77704862 L3.04920154,9.77704862 L3.04920154,4.00027169 L3.27871134,4.00027169 L5.02052674,9.77704862 L7.20086978,9.77704862 L8.9344884,4.00027169 L9.15170302,4.00027169 L9.15170302,9.77704862 L12.2009045,9.77704862 L12.2009045,-2.51086796e-06 L9.15580144,-2.51086796e-06 C8.37900291,-0.00132261872 7.69523528,0.522142758 7.47956024,1.28326374 L6.2090596,5.77677689 L6.2090596,5.77677689 Z" id="Shape" fill="#006544"></path>
+                        <path d="M24.1804961,0 L17.4304492,0 C17.8502995,2.32242224 19.8250361,4.00977605 22.1313016,4.0167388 L27.3772397,4.0167388 C27.569419,3.0334491 27.3224073,2.01365655 26.7037793,1.23634457 C26.0851514,0.459032574 25.1596619,0.00556631433 24.1804961,0 L24.1804961,0 L24.1804961,0 Z" id="Shape" fill="url(#linearGradient-4)"></path>
+                        <polygon id="Rectangle-path" fill="#006544" points="13.5082908 0 16.5574923 0 16.5574923 9.77705113 13.5082908 9.77705113"></polygon>
+                        <path d="M27.4592075,9.77796236 L25.295258,6.48078354 C26.2171053,6.1427972 26.9417692,5.40363611 27.2706816,4.46584093 L17.8689768,4.46584093 L17.8689768,9.77379929 L20.9017848,9.77379929 L20.9017848,6.69726498 L22.3608113,6.69726498 L23.9591831,9.79877791 L27.4592075,9.77796236 L27.4592075,9.77796236 Z" id="Shape" fill="#006544"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
