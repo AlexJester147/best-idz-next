@@ -1,14 +1,12 @@
+// "use client";
 import Link from "next/link";
 import { getCategoryDataById } from "@/api/requests";
 
-export default async function Home() {
-  const data = await getCategoryDataById(0);
+export default async function Category({ params }) {
+  const data = await getCategoryDataById(params.categoryId);
 
   return (
-    <div>
-      <ul className="breadcrumbs" style={{ visibility: "hidden" }}>
-        <li>Главная</li>
-      </ul>
+    <>
       <div className="category-container">
         {data.category.map((category) =>
           category.sub ? (
@@ -28,6 +26,6 @@ export default async function Home() {
           )
         )}
       </div>
-    </div>
+    </>
   );
 }
