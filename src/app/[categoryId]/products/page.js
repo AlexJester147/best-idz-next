@@ -1,15 +1,10 @@
-"use client";
 import Link from "next/link";
 import { getProductsByCategoryId } from "@/api/requests";
-import { useState } from "react";
-import { usePathname } from "next/navigation";
 import { setCategoryName } from "@/utils/functions";
 
-export default function CategoryProducts({ params }) {
-  const [data, setData] = useState([]);
-  const pathname = usePathname();
-
-  getProductsByCategoryId(params.categoryId).then((data) => setData(data));
+export default async function CategoryProducts({ params }) {
+  const pathname = `/${params.categoryId}/products`;
+  const data = await getProductsByCategoryId(params.categoryId);
 
   return (
     <>

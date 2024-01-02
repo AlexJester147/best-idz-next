@@ -1,3 +1,4 @@
+"use server";
 import { storeKey, apiCatalog, apiProducts, apiProductInfo } from "./APIConfig";
 
 export async function getCategoryDataById(id) {
