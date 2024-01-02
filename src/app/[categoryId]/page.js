@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { getCategoryDataById } from "@/api/requests";
 import { setCategoryName } from "@/utils/functions";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default async function Category({ params }) {
   const data = await getCategoryDataById(params.categoryId);
 
   return (
     <>
+      <Breadcrumbs id={params.categoryId} />
       <div className="category-container">
         {data &&
           data.category.map((category) =>

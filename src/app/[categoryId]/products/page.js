@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getProductsByCategoryId } from "@/api/requests";
 import { setCategoryName } from "@/utils/functions";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default async function CategoryProducts({ params }) {
   const pathname = `/${params.categoryId}/products`;
@@ -8,6 +9,7 @@ export default async function CategoryProducts({ params }) {
 
   return (
     <>
+      <Breadcrumbs id={params.categoryId} />
       <div className="category-container">
         {data &&
           data.product?.map((item) => (

@@ -1,3 +1,10 @@
+import Breadcrumbs from "@/components/Breadcrumbs";
+
 export default function Contacts() {
-  return <div>Contacts</div>;
+  return (
+    <>
+      <Breadcrumbs data={[{ id: "", name: "Контакты" }]} />
+      <div>Contacts</div>
+    </>
+  );
 }

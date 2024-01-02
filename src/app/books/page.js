@@ -1,3 +1,10 @@
+import Breadcrumbs from "@/components/Breadcrumbs";
+
 export default function Books() {
-  return <div>Books</div>;
+  return (
+    <>
+      <Breadcrumbs data={[{ id: "", name: "Задачники" }]} />
+      <div>Books</div>
+    </>
+  );
 }
