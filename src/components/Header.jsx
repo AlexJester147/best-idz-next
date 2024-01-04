@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
+import Cart from "./Cart";
 
 const Header = () => {
   return (
     <header className="header">
+      <Cart />
       <nav>
         <ul>
           <li>
