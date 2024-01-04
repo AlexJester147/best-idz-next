@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getProductsByCategoryId } from "@/api/requests";
-import { setCategoryName } from "@/utils/functions";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import CategoryBlock from "@/components/CategoryBlock";
 
 export default async function CategoryProducts({ params }) {
   const pathname = `/${params.categoryId}/products`;
@@ -15,10 +15,7 @@ export default async function CategoryProducts({ params }) {
           data.product?.map((item) => (
             <div key={item.id} className="category">
               <Link href={`${pathname}/${item.id}`}>
-                <div className="category-image">
-                  {setCategoryName(item.name)}
-                </div>
-                <div className="category-name">{item.name}</div>
+                <CategoryBlock>{item.name}</CategoryBlock>
               </Link>
               <div className="price-container">
                 <div className="new-price">{item.base_price} RUB</div>

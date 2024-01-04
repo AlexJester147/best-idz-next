@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { getCategoryDataById } from "@/api/requests";
-import { setCategoryName } from "@/utils/functions";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import CategoryBlock from "@/components/CategoryBlock";
+import Link from "next/link";
 
 export default async function Category({ params }) {
   const data = await getCategoryDataById(params.categoryId);
@@ -14,21 +14,11 @@ export default async function Category({ params }) {
           data.category.map((category) =>
             category.sub ? (
               <Link key={category.id} href={`${category.id}`}>
-                <div className="category-block">
-                  <div className="category-image">
-                    {setCategoryName(category.name)}
-                  </div>
-                  <div className="category-name">{category.name}</div>
-                </div>
+                <CategoryBlock>{category.name}</CategoryBlock>
               </Link>
             ) : (
               <Link key={category.id} href={`${category.id}/products/`}>
-                <div className="category-block">
-                  <div className="category-image">
-                    {setCategoryName(category.name)}
-                  </div>
-                  <div className="category-name">{category.name}</div>
-                </div>
+                <CategoryBlock>{category.name}</CategoryBlock>
               </Link>
             )
           )}
