@@ -2,9 +2,10 @@
 import { React, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import cart from "../assets/icons/cart.svg";
-import cartEmpty from "../assets/icons/cartEmpty.svg";
+import cart from "@/assets/icons/cart.svg";
+import cartEmpty from "@/assets/icons/cartEmpty.svg";
 import useStore from "@/store/cart";
+import CartItemsContainer from "./CartItemsContainer";
 
 const Cart = () => {
   const { items } = useStore();
@@ -14,6 +15,7 @@ const Cart = () => {
     items.map((item) => +item.price).reduce((a, b) => a + b, 0) || 0;
 
   useEffect(() => {
+    useStore.persist.rehydrate();
     const handleOutsideClick = (e) => {
       if (open && !cartRef.current.contains(e.target)) {
         setOpen(false);
@@ -46,6 +48,7 @@ const Cart = () => {
           <>
             {items.length > 0 ? (
               <>
+                <CartItemsContainer />
                 <div className="cart-pay__container">
                   <div className="cart-pay__block">
                     <div className="cart-pay__count">

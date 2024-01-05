@@ -51,6 +51,7 @@ const useStore = create(
     {
       name: "cart-storage",
       storage: createJSONStorage(() => localStorage),
+      skipHydration: true,
     }
   )
 );

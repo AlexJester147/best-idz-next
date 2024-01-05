@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getProductsByCategoryId } from "@/api/requests";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CategoryBlock from "@/components/CategoryBlock";
-import AddCartButton from "@/components/AddCartButton";
+import AddCartButton from "@/components/cart/AddCartButton";
 
 export default async function CategoryProducts({ params }) {
   const pathname = `/${params.categoryId}/products`;
