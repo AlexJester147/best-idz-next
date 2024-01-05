@@ -4,11 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import cart from "../assets/icons/cart.svg";
 import cartEmpty from "../assets/icons/cartEmpty.svg";
+import useStore from "@/store/cart";
 
 const Cart = () => {
-  const items = 0;
+  const { items } = useStore();
   const [open, setOpen] = useState(false);
   const cartRef = useRef();
+  const totalPrice =
+    items.map((item) => +item.price).reduce((a, b) => a + b, 0) || 0;
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
