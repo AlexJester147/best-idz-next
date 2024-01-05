@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getProductsByCategoryId } from "@/api/requests";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CategoryBlock from "@/components/CategoryBlock";
+import AddCartButton from "@/components/AddCartButton";
 
 export default async function CategoryProducts({ params }) {
   const pathname = `/${params.categoryId}/products`;
@@ -24,7 +25,9 @@ export default async function CategoryProducts({ params }) {
                 <Link href={`${pathname}/${item.id}`}>
                   <div className="buy-button">Купить</div>
                 </Link>
-                <div className="cart-button__container"></div>
+                <div className="add-cart__container">
+                  <AddCartButton item={item} />
+                </div>
               </div>
             </div>
           ))}
