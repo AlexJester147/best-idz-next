@@ -1,4 +1,4 @@
-import "../scss/app.scss";
+import "@/scss/app.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 

@@ -1,6 +1,4 @@
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import "@/scss/app.scss";
 
 export const metadata = {
   title: "Redirect",
@@ -10,7 +8,7 @@ export const metadata = {
 export default function RedirectLayout({ children }) {
   return (
     <html lang="ru">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
