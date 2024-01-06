@@ -2,9 +2,19 @@ import React from "react";
 import Link from "next/link";
 import { getProductsByCategoryId } from "@/api/requests";
 
-const Breadcrumbs = async ({ data, id }) => {
+const Breadcrumbs = async ({ isProduct, data, id }) => {
   const reqData = await getProductsByCategoryId(id);
-  const selectData = !id ? data : reqData?.breadCrumbs;
+  isProduct
+    ? (reqData.breadCrumbs[reqData.breadCrumbs.length - 1].id += "/products")
+    : reqData.breadCrumbs;
+
+  const selectData =
+    id && data
+      ? [...reqData.breadCrumbs, data]
+      : data
+      ? data
+      : reqData.breadCrumbs;
+
   return (
     selectData && (
       <ul className="breadcrumbs">
