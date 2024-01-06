@@ -7,6 +7,11 @@ import {
   apiOptions,
 } from "./APIConfig";
 
+const date = new Date();
+const year = date.getFullYear();
+const month = date.getMonth() + 1;
+const day = date.getDate();
+
 export async function getCategoryDataById(id) {
   const options = {
     method: "GET",
@@ -69,5 +74,21 @@ export async function getIdPo(item) {
     body: JSON.stringify(data),
   };
   const response = await fetch(apiOptions, options);
+  return response.json();
+}
+
+export async function getRubCurrency() {
+  const response = await fetch(
+    `https://www.nbrb.by/api/exrates/rates/456?periodicity=0&ondate=${year}-${month}-${day}`
+  );
+
+  return response.json();
+}
+
+export async function getKztCurrency() {
+  const response = await fetch(
+    `https://www.nbrb.by/api/exrates/rates/459?periodicity=0&ondate=${year}-${month}-${day}`
+  );
+
   return response.json();
 }
